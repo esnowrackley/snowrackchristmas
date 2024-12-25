@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAIL OUT, DINE IN</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@300;400&family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Lora', serif; /* Thin serif font for the body */
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        header {
+            background-image: url('img/river-fire.webp'); /* WebP image here */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 40px 20px;
+            color: white;
+            text-align: center;
+        }
+
+        header h1 {
+            font-family: 'Montserrat', sans-serif; /* Bold sans-serif font for title */
+            font-size: 50px;
+            margin: 0;
+            z-index: 2; /* Keeps the title text above the background */
+            position: relative;
+        }
+
+        header p {
+            font-family: 'Montserrat', sans-serif; /* Bold sans-serif for subtitle */
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        /* Navbar styling */
+        .navbar {
+            display: flex;
+            justify-content: center;
+            padding: 12px 0;
+            position: relative;
+            z-index: 1; /* Ensures navbar stays above background */
+        }
+
+        .navbar a {
+            font-family: 'Montserrat', sans-serif; /* Sans-serif font for nav links */
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 18px;
+            text-transform: uppercase; /* Adds a modern touch */
+            font-weight: 600;
+        }
+
+        .navbar a:hover {
+            color: #ff6347;
+        }
+
+        .section-title {
+            font-family: 'Lora', serif; /* Thin serif for section titles */
+            text-align: center;
+            margin: 40px 0;
+            font-size: 32px;
+            color: #2d3e50;
+        }
+
+        .section-description {
+            font-family: 'Lora', serif; /* Thin serif for description */
+            text-align: center;
+            font-size: 18px;
+            color: #777;
+            margin-bottom: 20px;
+        }
+
+        /* Explainer Section Styling */
+        #explainer {
+            margin: 40px auto; /* Adds margin on all sides, auto centers it */
+            padding: 20px; /* Adds padding inside the section */
+            max-width: 900px; /* Optional: limits the width for better readability */
+            background-color: #fff; /* Optional: background color */
+            border-radius: 8px; /* Optional: rounded corners */
+        }
+
+        .food-category {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            margin-bottom: 40px;
+            gap: 20px;
+        }
+
+        .category-card {
+            width: 30%;
+            margin: 10px;
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: white;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .category-card img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .category-card:hover {
+            transform: scale(1.05);
+        }
+
+        .category-info {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .category-info h3 {
+            font-family: 'Lora', serif; /* Thin serif for category headers */
+            font-size: 24px;
+            color: #333;
+            margin: 10px 0;
+        }
+
+        .category-info p {
+            font-family: 'Lora', serif; /* Thin serif for category descriptions */
+            font-size: 16px;
+            color: #777;
+        }
+
+        footer {
+            background-color: #2d3e50;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        footer p {
+            font-family: 'Lora', serif; /* Thin serif for footer */
+            margin: 0;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 36px;
+            }
+
+            header p {
+                font-size: 16px;
+            }
+
+            .navbar a {
+                font-size: 16px;
+                margin: 0 10px;
+            }
+
+            .section-title {
+                font-size: 28px;
+            }
+
+            .section-description {
+                font-size: 16px;
+            }
+
+            .food-category {
+                justify-content: center;
+            }
+
+            .category-card {
+                width: 45%; /* Adjust the card width on medium screens */
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 28px;
+            }
+
+            header p {
+                font-size: 14px;
+            }
+
+            .navbar a {
+                font-size: 14px;
+                margin: 0 8px;
+            }
+
+            .section-title {
+                font-size: 24px;
+            }
+
+            .section-description {
+                font-size: 14px;
+            }
+
+            .food-category {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .category-card {
+                width: 80%; /* Stack cards vertically with more space on small screens */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>BAIL OUT, DINE IN</h1>
+        <p>places to visit on the way out of hell</p>
+        
+        <!-- Navbar -->
+        <div class="navbar">
+            <a href="#westside">West Side</a>
+            <a href="#heights">In The Heights</a>
+            <a href="#home">No Place Like Home</a>
+        </div>
+    </header>
+    
+    <!-- Explainer Section -->
+    <section id="explainer">
+        <h2 class="section-title">How This Works</h2>
+        <div class="section-description">
+            <p>Merry Christmas, Mom & Dad!</p> 
+            <p>On this website, you'll find a few pairings: a special place, a restaurant, and a place to get drinks. These are places that I think are special or in some way worth visiting before moving away.</p>
+            <p>The gift is: whenever you want to, pick one of these for a date night (or few! You don't have to do all the activities in one night, they just go well together). Let me know when you do and I'll call, make the reservations, and pick up the tab; Cleveland on me! If you want I'll look at the menu and give my reccomendations for drinks.</p>
+            <p>This is something you can do just you two, as a family, however you like. Consider this the master gift card.</p> 
+            <p>You might not find a lot of new spots in here, but there might be a novel place or two. Cleveland's still changing after all these years... eat up!</p>
+        </div>
+    </section>
+
+    <!-- Monday - Italian Cuisine -->
+    <section id="westside">
+        <h2 class="section-title">Near West, Near to the Heart</h2>
+        <div class="section-description">
+            <p>You know what my first pick would have been... oh well, the Near West Side will always be incredibly important to me. Try this combo:</p>
+        </div>
+        <div class="food-category">
+            <div class="category-card">
+                <img src="img/towpath.webp" alt="Towpath">
+                <div class="category-info">
+                    <h3>The Tremont Towpath</h3>
+                    <p>When the river isn't on fire, in the right light, it's beautiful. The metroparks didn't have this when we were younger, but I remember many a Saturday on the other side of the bridge heading down to the Ohio City Bike Co-op. It's not as nice over there, but here, take a pause and take in the overlook. It's a precious sight. Best experienced in later spring.</p>
+                </div>
+            </div>
+            <div class="category-card">
+                <img src="img/lepetit.jpg" alt="Triangle">
+                <div class="category-info">
+                    <h3>Le Petit Triangle</h3>
+                    <p>I remember when you first found Le Petit! It's when we were going out to brunch every weekend. I didn't go with you the first time, but we eventually ended up there. It's a classic and we've been there with visitors, for birthdays, date nights, and more.</p>
+                </div>
+            </div>
+            <div class="category-card">
+                <img src="img/cloak.jpeg" alt="Cloak">
+                <div class="category-info">
+                    <h3>Cloak and Dagger</h3>
+                    <p>Not a Snow-Rackley staple, but the right date night deserves a proper nightcap. April's sister is married to a chef who insisted we go here. He ordered for us and quizzed us on the different flavors we found in each drink. They were truly amazing. If you're looking for a little more low-key, we can sub in the Literary Tavern, they've also got pierogis.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tuesday - Asian Cuisine -->
+    <section id="heights">
+        <h2 class="section-title">In The Heights</h2>
+        <div class="section-description">
+            <p>Cleveland has changed so much, half of everywhere is gone or has changed... luckily we still have some good picks.</p>
+        </div>
+        <div class="food-category">
+            <div class="category-card">
+                <img src="img/museum.webp" alt="Museum">
+                <div class="category-info">
+                    <h3>The CMA</h3>
+                    <p>It's always worth a trip to the museum, even if it's just a chance to sit in the atrium or sit by the lagoon. This is a good winter one, inside, or a great spring one with the blossoms, so think about time of year. Again, I've got countless memories here. I think of it as a stand in for all the museums we went to in that area.</p>
+                </div>
+            </div>
+            <div class="category-card">
+                <img src="img/zhug.jpeg" alt="Zhug">
+                <div class="category-info">
+                    <h3>Zhug</h3>
+                    <p>No meal would be complete without something from Doug Katz. Since Fire closed and the Diner location can't keep a tenant, I look to Zhug. I don't know if I had anything he made other than the popup, which was incredible, but like any good chef, I can always make substitutions.</p>
+                </div>
+            </div>
+            <div class="category-card">
+                <img src="img/fairmount.jpeg" alt="Fairmount">
+                <div class="category-info">
+                    <h3>The Fairmount</h3>
+                    <p>Could you believe I've never been inside? I don't know a thing about this place, except that you two have been. The Fairmount, if I remember correctly, is a great place for a great drink.</p>
+                </div>
+            </div>
+        </div>
+       </section>
+       <section id="home">
+       <h2 class="section-title">There's No Place Like Home</h2>
+         <div class="section-description">
+            <p>Keeping it close to home with a winning combination.</p>
+        </div>
+        <div class="food-category">
+            <div class="category-card">
+                <img src="img/cain.jpg" alt="Museum">
+                <div class="category-info">
+                    <h3>Cain Park</h3>
+                    <p>Definitely best served in Summer, it's been 20 years of hearing concerts on our street and occasional visits to the park. It's the perfect opportunity to show up to listen for a final season.</p>
+                </div>
+            </div>
+            <div class="category-card">
+                <img src="img/deweys.jpg" alt="Deweys">
+                <div class="category-info">
+                    <h3>Dewey's</h3>
+                    <p>No one said it had to be fine dining. This was such a staple of our time here, I don't know what else to say! Never another pizza like this. It's also the perfect meal to bring to, say, Cain Park for a concert.</p>
+                </div>
+            </div>
+            <div class="category-card">
+                <img src="img/speakeasy.jpg" alt="Speakeasy">
+                <div class="category-info">
+                    <h3>Quintana's</h3>
+                    <p>You know it's the best in town, my first speakeasy and still the most fun of all the one's I've been to. It's the perfect way to finish off an evening, or, say, one of the last nights in the city.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
